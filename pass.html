@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <div class="header">
+            <img src="logo.PNG" alt="logo" />
+            <h2>Welcome</h2>
+            <p class="pass-email">admin@google.com</p>
+          </div>
+
+          <form
+            id="pass-form"
+            onsubmit="return passCheck()"
+            action="./home.html"
+          >
+            <div class="form-first-line">
+              <div class="input-group">
+                <input
+                  type="password"
+                  id="password"
+                  class="input-area"
+                  required
+                />
+                <label for="email" class="label">Enter your password</label>
+                <img src="./eye.PNG" class="eye" />
+              </div>
+            </div>
+
+            <div class="warning" id="warningMsg" style="display: none;">
+              <img src="./warning-icon.PNG" class="warning-icon" />
+              <span class="warning-text">
+                Enter the correct Admin password
+              </span>
+            </div>
+            <p class="signin-text">Forgot password?</p>
+            <input type="submit" value="Next" class="btn" id="pass-btn" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      const adminPass = "karachi",
+        warningMsg = document.getElementById("warningMsg"),
+        passForm = document.getElementById("pass-form");
+
+      function passCheck() {
+        let inputPass = document.getElementById("password").value;
+
+        if (inputPass == adminPass) {
+          return true;
+        } else {
+          warningMsg.style.display = "block";
+          document.querySelector(".label").style.display = "none";
+          document.getElementById("password").style.borderColor = "red";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

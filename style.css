@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  padding: 50px 40px;
+  border: 1px solid silver;
+  border-radius: 8px;
+}
+.header {
+  text-align: center;
+}
+.header h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
+.header p {
+  margin: 12px 0 25px 0;
+}
+
+.header img {
+  width: 90px;
+}
+
+.username-suggestion-text {
+  font-size: 14px;
+  margin: 70px 0 14px 0;
+  text-align: left;
+  color: rgb(96, 96, 96);
+}
+.signin-text {
+  color: royalblue;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  top: 15px;
+  left: 0;
+}
+.btn {
+  position: relative;
+  left: 75%;
+  padding: 8px 30px;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  border: 1px solid royalblue;
+  border-radius: 5px;
+}
+.input-group {
+  position: relative;
+}
+.input-group .input-area {
+  outline: none;
+  border: 1px solid;
+  border-color: #cacaca;
+  padding: 17px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+}
+.input-group .input-area:focus {
+  border: 2px solid royalblue;
+}
+
+.input-group .label {
+  color: #6e6e6e;
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  background: #ffffff;
+  transition: 0.15s;
+  font-size: 14px;
+}
+
+.input-group .input-area:focus + .label {
+  top: -8px;
+  left: 8px;
+  padding: 0 4px;
+  font-size: 12px;
+  color: royalblue;
+}
+.warning-text {
+  color: red;
+  font-size: 14px;
+}
+.warning-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: -4px;
+}
+.pass-email {
+  border: 1px solid #cacaca;
+  padding: 5px;
+  border-radius: 50px;
+  width: 180px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 700;
+}
+.eye {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  right: 4%;
+  top: 20%;
+}
+#password {
+  margin-bottom: 35px;
+}
+#pass-btn {
+  margin-bottom: 100px;
+}

